@@ -17,7 +17,9 @@ var Loader = {
 	 * Loaders init function loads in the first file specified by data-start.
 	 */
 	init: function() {
-		Loader.load($('script[data-start]').data('start'));
+		if($('script[data-start]').length > 0) {
+			Loader.load($('script[data-start]').data('start'));
+		}
 	},
 
 	/**
